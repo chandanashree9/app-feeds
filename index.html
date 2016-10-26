@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<title>News Feeds</title>
+    	<meta charset="utf-8"/>
+    	<link rel="stylesheet" type="text/css" href="css/style.css">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+	    <link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <script src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>	    
+    	<script src="vendor/angular.min.js"></script>
+    	<script src="vendor/dirPagination.js"></script>
+	<head>
+	<body ng-app='feeds'>
+		<div role="main" class="container theme-showcase"> 
+			<div class="col-lg-2 demo-page-add">				
+			</div>     		
+        	<div class="col-lg-8">	
+        		<div class="page-header">
+					<h2 id="tables">News Feeds</h2>
+				</div>			
+				<display-feed></display-feed>
+				<form-feed></form-feed>
+			</div>
+		</div>	
+		<script src="app/app.js"></script> 
+		<script src="app/custom-directives/datePicker.js"></script>
+		<script src="app/custom-directives/displayFeeds.js"></script>
+		<script src="app/custom-directives/formFeed.js"></script>
+		<script src="app/services/feedSvc.js"></script>
+	</body>
+</html>

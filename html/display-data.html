@@ -1,0 +1,24 @@
+<div class="bs-component ng-scope">
+	<form class="form-inline ng-valid ng-dirty">
+		<div class="form-group">
+			<label>Search</label>
+			<input class="form-control ng-valid ng-dirty" ng-model="search" placeholder="Search" type="text">
+		</div>
+	</form>
+	<table class="table table-striped table-hover">
+		<thead>
+			<tr>
+				<th ng-click="sort('publishDate')" colspan="2">Feeds
+					<span class="glyphicon sort-icon" ng-show="sortKey=='publishDate'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>
+				</th>
+			</tr>
+		</thead>	
+		<tbody>
+			<tr dir-paginate="feed in datalist|orderBy:sortKey:reverse|filter:search|itemsPerPage:5">
+				<td width="80%">{{feed.content}} </td>
+				<td>{{feed.publishDate | date }}</td>
+			</tr>
+		</tbody>
+	</table>
+	<dir-pagination-controls max-size="5" direction-links="true" boundary-links="true" ></dir-pagination-controls>
+</div>
