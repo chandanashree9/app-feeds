@@ -8,7 +8,7 @@
                     var mindate= attrs["mindate"];
                     var maxdate=attrs["maxdate"];
                     var noofmonths = parseInt(attrs["noofmonths"]);
-                    var dateObj = {dateFormat: 'yy-mm-dd'};
+                    var dateObj = { dateFormat: 'yy-mm-dd'};
                     if(mindate){
                         dateObj.minDate=mindate;
                     }

@@ -22,7 +22,6 @@
 				            	"content":args.data.content,
 				            	"publishDate":args.data.publishDate
 				        	});
-				        	console.log($scope.datalist);
 						}
 					});
 					feedService.fetchFeedApi().then(

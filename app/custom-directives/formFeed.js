@@ -17,6 +17,8 @@
 							function(response) {
 								console.log(response);
 							}
+							$scope.content = "";
+							$scope.publishDate = "";
 						).catch(function(error) {});
 					}
 				},
