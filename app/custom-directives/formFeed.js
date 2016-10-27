@@ -15,10 +15,9 @@
 
 						feedService.publishFeedApi(input).then(
 							function(response) {
-								console.log(response);
+								$scope.content = "";
+								$scope.publishDate = "";
 							}
-							$scope.content = "";
-							$scope.publishDate = "";
 						).catch(function(error) {});
 					}
 				},

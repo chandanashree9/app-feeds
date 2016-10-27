@@ -7,7 +7,6 @@
 
 			this.publishFeedApi = function(data){
 				var dfd = $q.defer();
-				console.log(data);
 				$http.post('http://localhost:8081/app-feeds/feeds/publish',data,
 					{
     					headers: { 
@@ -16,11 +15,9 @@
     					}
 					}
 				).then(function(response) {
-						countries = response.data;
-						dfd.resolve(countries);
+						dfd.resolve(response.data);
 					}
 				).catch(function(error) {
-						console.log(error);
 						dfd.reject(error);
 					}
 				);
